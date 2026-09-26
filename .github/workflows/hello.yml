@@ -1,12 +1,21 @@
-name: Hello GitHub Actions
+name: Linux Exploration
 
 on:
   push:
 
 jobs:
-  hello:
+  explore:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Say Hello
-        run: echo "Hello from GitHub Actions"
+      - name: Show current Directory
+        run: pwd
+      
+      - name: List files
+        run: ls -la
+
+      - name: Show operating system
+        run: uname -a 
+
+      - name: Show user
+        run: whoami
