@@ -1,0 +1,21 @@
+name: Basic CLI
+
+on:
+    push:
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout repository
+              uses: actions/checkout@v4
+            
+            - name: Show repository files
+              run: ls -la
+
+            - name: Show current directory
+              run: pwd
+
+              
+
